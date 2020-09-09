@@ -14,3 +14,5 @@
 |```dotnet build``` | Compila y genera los archivos prontos para ser desplegados
 |```dotnet run``` | Compila y corre el proyecto
 | ```dotnet -h``` | Ayuda para ejecutar un comando o para inspeccionar diferentes comandos
+|```dotnet ef migrations add NombreMigracion -p ../Ubicacion_DataAccess``` | Crea una migracion, el NombreMigracion es el nombre que se le pone a la migracion para decir que es lo que cambio, Ubicacion_DataAccess tiene que ser la direccion en donde se encuentra el contexto
+|```dotnet ef database update -p ../Ubicacion_DataAccess```| Se encarga de ejecutar las queries creadas en la migracion para que en la base de datos se actualice las tablas, relaciones, tipo de datos sin la necesidad de perder los datos en la misma

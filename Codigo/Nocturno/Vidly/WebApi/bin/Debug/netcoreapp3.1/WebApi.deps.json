@@ -1436,6 +1436,7 @@
           "BusinessLogic": "1.0.0",
           "BusinessLogicInterface": "1.0.0",
           "DataAccess": "1.0.0",
+          "DataAccessInterface": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.8",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.8"

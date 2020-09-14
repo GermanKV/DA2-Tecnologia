@@ -1,4 +1,5 @@
 
+using BusinessLogicInterface;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi
@@ -7,6 +8,12 @@ namespace WebApi
     [Route("api/movies")]
     public class MovieController : ControllerBase
     {
+        private readonly IMovieLogic moviesLogic;
+
+        public MovieController(IMovieLogic moviesLogic)
+        {
+            this.moviesLogic = moviesLogic;
+        }
         //api/movies
         [HttpGet]
         public IActionResult Get()

@@ -14,16 +14,24 @@ namespace DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+
         }
-        
+
         public VidlyContext(DbContextOptions options) : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=ENVY15\\DANIELACEVEDO; Database=VidlyDB; Integrated Security=True; Trusted_Connection=True; MultipleActiveResultSets=True");
+                string directory = Directory.GetCurrentDirectory();
+
+                IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(directory)
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+                var connectionString = configuration.GetConnectionString(@"VidlyDB");
+                optionsBuilder.UseSqlServer(connectionString);
             }
         }
     }

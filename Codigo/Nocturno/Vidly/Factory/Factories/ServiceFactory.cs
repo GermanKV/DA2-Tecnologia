@@ -22,9 +22,9 @@ namespace Factory
             services.AddScoped<IMovieRepository, MovieRepository>();
         }
 
-        public void AddDbContextService(string connectionString)
+        public void AddDbContextService()
         {
-            services.AddDbContext<DbContext, VidlyContext>(options => options.UseSqlServer(connectionString)); 
+            services.AddDbContext<DbContext, VidlyContext>(); 
         }
     }
 }

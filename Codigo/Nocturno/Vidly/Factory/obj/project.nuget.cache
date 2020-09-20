@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JbB1VINx1aQzDi1KzVAk2WSund4GuBL91kCpayurFgEmcY/iSduEdv33LJklYR8KCMJmvvUOZvQdy6ELwzv38A==",
+  "dgSpecHash": "wZq6yAuk5o0VSp/zdSEHbzeNiXk/vNj1C4t+pjDwP93wyDdk8AVa+2XXTWUO/I/zrexooWMpYfjm1zbVnHIElQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\Factory\\Factory.csproj",
+  "projectFilePath": "c:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\Factory\\Factory.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

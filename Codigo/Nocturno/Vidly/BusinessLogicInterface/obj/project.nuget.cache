@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3Z/P9Kik7nezWiKwdrYFtKZfrZnE+UMfz/0c6k/Am9LQGFD7NoO2BEfJd5rN1d0lXQLX6o8ZOEs+5Q9SGfOW3Q==",
+  "dgSpecHash": "1WhzlWlSJy4P2fRMWmWqCp2wCdGLjJ3/HKbQUhsjIS+B0uCqndsAdJbikpCC8XEqUwvu6DS9Rk1S3CVzBI71Bw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\BusinessLogicInterface\\BusinessLogicInterface.csproj",
+  "projectFilePath": "c:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\BusinessLogicInterface\\BusinessLogicInterface.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

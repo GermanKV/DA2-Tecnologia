@@ -14,6 +14,7 @@ namespace WebApi
         {
             this.moviesLogic = moviesLogic;
         }
+        
         //api/movies
         [HttpGet]
         public IActionResult Get()
@@ -23,9 +24,9 @@ namespace WebApi
 
         //api/movies/5
         [HttpGet("{id}")]
-        public void Get([FromRoute]int id)
+        public IActionResult Get([FromRoute]int id)
         {
-
+            return Ok();
         }
 
         //api/movies?ageAllowed=5
@@ -37,14 +38,14 @@ namespace WebApi
 
         //api/movies
         [HttpPost]
-        public IActionResult Post([FromBody]object movie)
+        public IActionResult Post([FromBody]MovieModel movie)
         {
             return Ok();
         }
 
         //api/movies/5
         [HttpPut("{id}")]
-        public IActionResult Put([FromRoute]int id, [FromBody]object movie)
+        public IActionResult Put([FromRoute]int id, [FromBody]MovieModel movie)
         {
             return Ok();
         }
@@ -61,6 +62,13 @@ namespace WebApi
         public IActionResult Delete()
         {
             return Ok();
+        }
+
+        public class MovieModel
+        {
+            public string Name { get; set; }
+            public string Description { get; set; }
+            public double Duration { get; set; }
         }
     }
 }

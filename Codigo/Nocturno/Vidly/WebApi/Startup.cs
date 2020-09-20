@@ -27,6 +27,9 @@ namespace WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            ServiceFactory serviceFactory = new ServiceFactory(services);
+            serviceFactory.AddCustomServices();
+            serviceFactory.AddDbContextService(this.Configuration.GetConnectionString("VidlyDB"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

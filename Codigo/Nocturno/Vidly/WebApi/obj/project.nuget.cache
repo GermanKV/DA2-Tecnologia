@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ei5XqCr46ANS9n1ZGW43pnfrmb71FYs/yxmLYpZ9VqMVS/1iFtHBxQB1nCpAzpR7y1FaYX7HBV40li1ennPPjA==",
+  "dgSpecHash": "Q4NsroTXJz0dlGkwEF6geVnR54jZOM3puF3HQr52akkpZyRgonm90DavzR3+El3sQ7vRQjzzJE3+MSRdIpjPFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\WebApi\\WebApi.csproj",
+  "projectFilePath": "c:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

@@ -28,8 +28,8 @@ namespace WebApi
         {
             services.AddControllers();
             ServiceFactory serviceFactory = new ServiceFactory(services);
-            serviceFactory.AddCustomServices();
             serviceFactory.AddDbContextService();
+            serviceFactory.AddCustomServices();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -29,6 +29,9 @@
       "BusinessLogicInterface/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/BusinessLogicInterface.dll": {}
         },
@@ -39,11 +42,34 @@
       "DataAccessInterface/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/DataAccessInterface.dll": {}
         },
         "runtime": {
           "bin/placeholder/DataAccessInterface.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "SessionInterface/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SessionInterface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SessionInterface.dll": {}
         }
       }
     }
@@ -201,13 +227,25 @@
       "type": "project",
       "path": "../DataAccessInterface/DataAccessInterface.csproj",
       "msbuildProject": "../DataAccessInterface/DataAccessInterface.csproj"
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "SessionInterface/1.0.0": {
+      "type": "project",
+      "path": "../SessionInterface/SessionInterface.csproj",
+      "msbuildProject": "../SessionInterface/SessionInterface.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "BusinessLogicInterface >= 1.0.0",
       "DataAccessInterface >= 1.0.0",
-      "NETStandard.Library >= 2.0.3"
+      "Domain >= 1.0.0",
+      "NETStandard.Library >= 2.0.3",
+      "SessionInterface >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -248,6 +286,12 @@
             },
             "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\DataAccessInterface\\DataAccessInterface.csproj": {
               "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\DataAccessInterface\\DataAccessInterface.csproj"
+            },
+            "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\Domain\\Domain.csproj"
+            },
+            "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\SessionInterface\\SessionInterface.csproj": {
+              "projectPath": "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\SessionInterface\\SessionInterface.csproj"
             }
           }
         }

@@ -11,7 +11,9 @@
         "dependencies": {
           "BusinessLogicInterface": "1.0.0",
           "DataAccessInterface": "1.0.0",
-          "NETStandard.Library": "2.0.3"
+          "Domain": "1.0.0",
+          "NETStandard.Library": "2.0.3",
+          "SessionInterface": "1.0.0"
         },
         "runtime": {
           "BusinessLogic.dll": {}
@@ -24,13 +26,29 @@
         }
       },
       "BusinessLogicInterface/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
         "runtime": {
           "BusinessLogicInterface.dll": {}
         }
       },
       "DataAccessInterface/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
         "runtime": {
           "DataAccessInterface.dll": {}
+        }
+      },
+      "Domain/1.0.0": {
+        "runtime": {
+          "Domain.dll": {}
+        }
+      },
+      "SessionInterface/1.0.0": {
+        "runtime": {
+          "SessionInterface.dll": {}
         }
       }
     }
@@ -61,6 +79,16 @@
       "sha512": ""
     },
     "DataAccessInterface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SessionInterface/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

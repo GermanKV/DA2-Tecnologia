@@ -70,3 +70,7 @@ C:\Users\Daniel\Documents\GitHub\DA2-Tecnologia\Codigo\Nocturno\Vidly\WebApi\obj
 C:\Users\Daniel\Documents\GitHub\DA2-Tecnologia\Codigo\Nocturno\Vidly\WebApi\obj\Debug\netcoreapp3.1\WebApi.dll
 C:\Users\Daniel\Documents\GitHub\DA2-Tecnologia\Codigo\Nocturno\Vidly\WebApi\obj\Debug\netcoreapp3.1\WebApi.pdb
 C:\Users\Daniel\Documents\GitHub\DA2-Tecnologia\Codigo\Nocturno\Vidly\WebApi\obj\Debug\netcoreapp3.1\WebApi.genruntimeconfig.cache
+C:\Users\Daniel\Documents\GitHub\DA2-Tecnologia\Codigo\Nocturno\Vidly\WebApi\bin\Debug\netcoreapp3.1\Model.dll
+C:\Users\Daniel\Documents\GitHub\DA2-Tecnologia\Codigo\Nocturno\Vidly\WebApi\bin\Debug\netcoreapp3.1\Model.pdb
+C:\Users\Daniel\Documents\GitHub\DA2-Tecnologia\Codigo\Nocturno\Vidly\WebApi\bin\Debug\netcoreapp3.1\SessionInterface.dll
+C:\Users\Daniel\Documents\GitHub\DA2-Tecnologia\Codigo\Nocturno\Vidly\WebApi\bin\Debug\netcoreapp3.1\SessionInterface.pdb

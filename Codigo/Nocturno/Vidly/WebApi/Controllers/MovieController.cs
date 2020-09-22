@@ -1,8 +1,10 @@
 
+using System.Linq;
 using BusinessLogicInterface;
 using Microsoft.AspNetCore.Mvc;
+using Model.Out;
 
-namespace WebApi
+namespace WebApi.Controllers
 {
     [ApiController]
     [Route("api/movies")]
@@ -14,26 +16,27 @@ namespace WebApi
         {
             this.moviesLogic = moviesLogic;
         }
+
         //api/movies
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok();
+            return Ok(this.moviesLogic.GetAll().Select(m => new MovieBasicInfoModel(m)));
         }
 
         //api/movies/5
-        [HttpGet("{id}")]
-        public void Get([FromRoute]int id)
-        {
-
-        }
-
-        //api/movies?ageAllowed=5
-        [HttpGet]
-        public IActionResult GetBy([FromQuery]int ageAllowed)
+        [HttpGet("{id}", Name = "GetMovie")]
+        public IActionResult Get([FromRoute]int id)
         {
             return Ok();
         }
+
+        //api/movies?ageAllowed=5
+        /*[HttpGet]
+        public IActionResult GetBy([FromQuery]int ageAllowed)
+        {
+            return Ok();
+        }*/
 
         //api/movies
         [HttpPost]

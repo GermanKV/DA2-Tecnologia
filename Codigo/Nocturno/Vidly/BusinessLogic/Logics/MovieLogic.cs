@@ -1,5 +1,6 @@
 ﻿using BusinessLogicInterface;
 using DataAccessInterface;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,6 +14,11 @@ namespace BusinessLogic
         public MovieLogic(IMovieRepository moviesRepository)
         {
             this.moviesRepository = moviesRepository;
+        }
+
+        public IEnumerable<Movie> GetAll()
+        {
+            return this.moviesRepository.GetAll();
         }
     }
 }

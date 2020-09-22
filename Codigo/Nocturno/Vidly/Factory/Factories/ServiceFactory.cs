@@ -18,8 +18,8 @@ namespace Factory
 
         public void AddCustomServices()
         {
-            services.AddScoped<IMovieLogic, MovieLogic>();
             services.AddScoped<IMovieRepository, MovieRepository>();
+            services.AddScoped<IMovieLogic, MovieLogic>();
         }
 
         public void AddDbContextService()

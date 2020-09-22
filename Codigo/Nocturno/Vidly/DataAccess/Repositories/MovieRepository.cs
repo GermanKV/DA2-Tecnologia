@@ -17,5 +17,10 @@ namespace DataAccess
             this.context = context;
             this.movies = context.Set<Movie>();
         }
+
+        public IEnumerable<Movie> GetAll()
+        {
+            return this.movies;
+        }
     }
 }

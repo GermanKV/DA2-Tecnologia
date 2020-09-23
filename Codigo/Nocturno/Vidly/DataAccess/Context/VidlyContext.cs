@@ -9,6 +9,7 @@ namespace DataAccess
     {
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<SessionState> Sessions { get; set; } 
 
         public VidlyContext() { }
 

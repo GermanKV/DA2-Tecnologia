@@ -3,11 +3,13 @@ using System.Linq;
 using BusinessLogicInterface;
 using Microsoft.AspNetCore.Mvc;
 using Model.Out;
+using WebApi.Filters;
 
 namespace WebApi.Controllers
 {
     [ApiController]
     [Route("api/movies")]
+    [ServiceFilter(typeof(AuthorizationDIFilter))]
     public class MovieController : ControllerBase
     {
         private readonly IMovieLogic moviesLogic;

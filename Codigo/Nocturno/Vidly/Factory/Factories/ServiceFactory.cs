@@ -4,6 +4,7 @@ using DataAccess;
 using DataAccessInterface;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using SessionInterface;
 
 namespace Factory
 {
@@ -20,6 +21,7 @@ namespace Factory
         {
             services.AddScoped<IMovieRepository, MovieRepository>();
             services.AddScoped<IMovieLogic, MovieLogic>();
+            services.AddScoped<ISessionLogic, SessionLogic>();
         }
 
         public void AddDbContextService()

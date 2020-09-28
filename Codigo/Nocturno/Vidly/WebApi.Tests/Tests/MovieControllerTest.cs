@@ -76,7 +76,7 @@ namespace WebApi.Tests
             var controller = new MovieController(mock.Object);
 
             var result = controller.Post(movieModel);
-            var status = result as CreatedAtActionResult;
+            var status = result as CreatedAtRouteResult;
             var content = status.Value as MovieDetailInfoModel;
 
             mock.VerifyAll();

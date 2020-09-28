@@ -22,5 +22,17 @@ namespace Model.Out
             this.AgeAllowed = movie.AgeAllowed;
             this.Image = movie.Image;
         }
+
+        public override bool Equals(object obj)
+        {
+            var result = false;
+
+            if(obj is MovieDetailInfoModel model)
+            {
+                result = model.Id == this.Id;
+            }
+
+            return result;
+        }
     }
 }

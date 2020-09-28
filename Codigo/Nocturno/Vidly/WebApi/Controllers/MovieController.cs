@@ -32,13 +32,6 @@ namespace WebApi.Controllers
             return Ok();
         }
 
-        //api/movies?ageAllowed=5
-        /*[HttpGet]
-        public IActionResult GetBy([FromQuery]int ageAllowed)
-        {
-            return Ok();
-        }*/
-
         //api/movies
         [HttpPost]
         public IActionResult Post([FromBody]MovieModel movieModel)

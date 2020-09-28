@@ -22,5 +22,13 @@ namespace DataAccess
         {
             return this.movies;
         }
+
+        public Movie Add(Movie movie)
+        {
+            this.movies.Add(movie);
+            this.context.SaveChanges();
+
+            return movie;
+        }
     }
 }

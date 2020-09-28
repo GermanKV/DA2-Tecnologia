@@ -67,14 +67,41 @@ namespace DataAccess.Tests
                     Duration = 1.5
                 }
             };
-            var mockSet = new VidlyDbSet<Movie>();
+            var mockSet = new Mock<DbSet<Movie>>();
+            mockSet.As<IQueryable<Movie>>().Setup(m => m.GetEnumerator()).Returns(moviesToReturn.AsQueryable().GetEnumerator());
             var mockDbContext = new Mock<DbContext>(MockBehavior.Strict);
-            mockDbContext.Setup(d => d.Set<Movie>()).Returns(mockSet.GetMockDbSet(moviesToReturn).Object);
+            mockDbContext.Setup(d => d.Set<Movie>()).Returns(mockSet.Object);
             var repository = new MovieRepository(mockDbContext.Object);
 
             var result = repository.GetAll();
 
             Assert.IsTrue(moviesToReturn.SequenceEqual(result));
+        }
+
+        [TestMethod]
+        public void TestAddMovieMockOk()
+        {
+            Movie movie = new Movie()
+            {
+                Name = "Elona Holmes",
+                AgeAllowed = 12,
+                CategoryId = 1,
+                Description = "La herama de Sherlock y Mycroft Holmes",
+                Duration = 2.1,
+                Image = "Mi directorio",
+            };
+            var mockSet = new Mock<DbSet<Movie>>();
+            mockSet.Setup(m => m.Add(It.IsAny<Movie>()));
+            var mockDbContext = new Mock<DbContext>(MockBehavior.Strict);
+            mockDbContext.Setup(d => d.Set<Movie>()).Returns(mockSet.Object);
+            mockDbContext.Setup(d => d.SaveChanges()).Returns(1);
+            var repository = new MovieRepository(mockDbContext.Object);
+
+            var result = repository.Add(movie);
+
+            mockSet.VerifyAll();
+            mockDbContext.VerifyAll();
+            Assert.AreEqual(result, movie);
         }
     }
 }

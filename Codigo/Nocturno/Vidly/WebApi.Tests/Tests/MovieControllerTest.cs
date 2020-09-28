@@ -4,6 +4,7 @@ using BusinessLogicInterface;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Model.In;
 using Model.Out;
 using Moq;
 using WebApi.Controllers;
@@ -40,11 +41,46 @@ namespace WebApi.Tests
             var controller = new MovieController(mock.Object);
 
             var result = controller.Get();
-	        var okResult = result as OkObjectResult;
-	        var movies = okResult.Value as IEnumerable<MovieBasicInfoModel>;
+            var okResult = result as OkObjectResult;
+            var movies = okResult.Value as IEnumerable<MovieBasicInfoModel>;
 
             mock.VerifyAll();
             Assert.IsTrue(moviesToReturn.Select(m => new MovieBasicInfoModel(m)).SequenceEqual(movies));
+        }
+
+        [TestMethod]
+        public void TestPostMovieOk()
+        {
+            MovieModel movieModel = new MovieModel()
+            {
+                Name = "Enola Holmes",
+                AgeAllowed = 12,
+                CategoryId = 1,
+                Description = "La herama de Sherlock y Mycroft Holmes",
+                Duration = 2.1,
+                Image = "Mi directorio",
+            };
+            Movie movieToReturn = new Movie()
+            {
+                Id = 1,
+                Name = "Enola Holmes",
+                AgeAllowed = 12,
+                CategoryId = 1,
+                Description = "La herama de Sherlock y Mycroft Holmes",
+                Duration = 2.1,
+                Image = "Mi directorio",
+                Rank = 0
+            };
+            var mock = new Mock<IMovieLogic>();
+            mock.Setup(m => m.Add(It.IsAny<Movie>())).Returns(movieToReturn);
+            var controller = new MovieController(mock.Object);
+
+            var result = controller.Post(movieModel);
+            var status = result as CreatedAtActionResult;
+            var content = status.Value as MovieDetailInfoModel;
+
+            mock.VerifyAll();
+            Assert.AreEqual(content, new MovieDetailInfoModel(movieToReturn));
         }
     }
 }

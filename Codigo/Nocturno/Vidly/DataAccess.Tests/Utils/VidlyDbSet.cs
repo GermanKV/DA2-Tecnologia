@@ -9,7 +9,7 @@ namespace DataAccess.Tests.Utils
     {
         internal  Mock<DbSet<T>> GetMockDbSet(ICollection<T> entities)
         {
-            var mockSet = new Mock<DbSet<T>>();
+            var mockSet = new Mock<DbSet<T>>(MockBehavior.Loose);
             mockSet.As<IQueryable<T>>().Setup(m => m.Provider).Returns(entities.AsQueryable().Provider);
             mockSet.As<IQueryable<T>>().Setup(m => m.Expression).Returns(entities.AsQueryable().Expression);
             mockSet.As<IQueryable<T>>().Setup(m => m.ElementType).Returns(entities.AsQueryable().ElementType);

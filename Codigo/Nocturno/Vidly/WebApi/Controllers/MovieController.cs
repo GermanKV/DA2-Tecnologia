@@ -2,6 +2,7 @@
 using System.Linq;
 using BusinessLogicInterface;
 using Microsoft.AspNetCore.Mvc;
+using Model.In;
 using Model.Out;
 
 namespace WebApi.Controllers
@@ -40,9 +41,10 @@ namespace WebApi.Controllers
 
         //api/movies
         [HttpPost]
-        public IActionResult Post([FromBody]object movie)
+        public IActionResult Post([FromBody]MovieModel movieModel)
         {
-            return Ok();
+            var movie = this.moviesLogic.Add(movieModel.ToEntity());
+            return CreatedAtRoute("GetName",new {id = movie.Id }, new MovieDetailInfoModel(movie));
         }
 
         //api/movies/5

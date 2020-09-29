@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using BusinessLogicInterface;
@@ -81,6 +82,27 @@ namespace WebApi.Tests
 
             mock.VerifyAll();
             Assert.AreEqual(content, new MovieDetailInfoModel(movieToReturn));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void TestPostMovieIncorrectCategory()
+        {
+            MovieModel movieModel = new MovieModel()
+            {
+                Name = "Enola Holmes",
+                AgeAllowed = 12,
+                CategoryId = 5000,
+                Description = "La herama de Sherlock y Mycroft Holmes",
+                Duration = 2.1,
+                Image = "Mi directorio"
+            };
+
+            var mock = new Mock<IMovieLogic>();
+            mock.Setup(m => m.Add(It.IsAny<Movie>())).Throws(new Exception());
+            var controller = new MovieController(mock.Object);
+
+            var result = controller.Post(movieModel);
         }
     }
 }

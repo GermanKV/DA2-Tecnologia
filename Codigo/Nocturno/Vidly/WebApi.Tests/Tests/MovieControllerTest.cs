@@ -98,7 +98,7 @@ namespace WebApi.Tests
                 Image = "Mi directorio"
             };
 
-            var mock = new Mock<IMovieLogic>();
+            var mock = new Mock<IMovieLogic>(MockBehavior.Strict);
             mock.Setup(m => m.Add(It.IsAny<Movie>())).Throws(new Exception());
             var controller = new MovieController(mock.Object);
 

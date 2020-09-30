@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using DataAccess.Tests.Utils;
 using Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -11,6 +10,22 @@ namespace DataAccess.Tests
     [TestClass]
     public class MovieRepositoryTest
     {
+        private DbContext context;
+        private DbContextOptions options;
+
+        [TestInitialize]
+        public void Setup()
+        {
+            this.options = new DbContextOptionsBuilder<VidlyContext>().UseInMemoryDatabase(databaseName: "VidlyDBtest").Options;
+            this.context = new VidlyContext(this.options);
+        }
+
+        [TestCleanup]
+        public void TestCleanup()
+        {
+            this.context.Database.EnsureDeleted();
+        }
+
         [TestMethod]
         public void TestGetAllMoviesOk()
         {
@@ -33,11 +48,9 @@ namespace DataAccess.Tests
                     Duration = 1.5
                 }
             };
-            
-            var options = new DbContextOptionsBuilder<VidlyContext>().UseInMemoryDatabase(databaseName: "VidlyDb").Options;
-            var context = new VidlyContext(options);
-            moviesToReturn.ForEach(m => context.Add(m));
-            context.SaveChanges();
+
+            moviesToReturn.ForEach(m => this.context.Add(m));
+            this.context.SaveChanges();
             var repository = new MovieRepository(context);
 
             var result = repository.GetAll();
@@ -46,40 +59,28 @@ namespace DataAccess.Tests
         }
 
         [TestMethod]
-        public void TestGetAllMoviesMockOk()
+        public void TestGetMovieOk()
         {
-            List<Movie> moviesToReturn = new List<Movie>()
+            var movie = new Movie()
             {
-                new Movie()
-                {
-                    Id = 1,
-                    Name = "Iron man 3",
-                    Description = "I'm Iron man",
-                    AgeAllowed = 16,
-                    Duration = 1.5
-                },
-                new Movie()
-                {
-                    Id = 2,
-                    Name = "Iron man 2",
-                    Description = "I'm Iron man",
-                    AgeAllowed = 16,
-                    Duration = 1.5
-                }
+                Name = "Elona Holmes",
+                AgeAllowed = 12,
+                CategoryId = 1,
+                Description = "La herama de Sherlock y Mycroft Holmes",
+                Duration = 2.1,
+                Image = "Mi directorio",
             };
-            var mockSet = new Mock<DbSet<Movie>>();
-            mockSet.As<IQueryable<Movie>>().Setup(m => m.GetEnumerator()).Returns(moviesToReturn.AsQueryable().GetEnumerator());
-            var mockDbContext = new Mock<DbContext>(MockBehavior.Strict);
-            mockDbContext.Setup(d => d.Set<Movie>()).Returns(mockSet.Object);
-            var repository = new MovieRepository(mockDbContext.Object);
+            this.context.Add(movie);
+            this.context.SaveChanges();
+            var repository = new MovieRepository(context);
 
-            var result = repository.GetAll();
+            var result = repository.Get(1);
 
-            Assert.IsTrue(moviesToReturn.SequenceEqual(result));
+            Assert.AreEqual(movie, result);
         }
 
         [TestMethod]
-        public void TestAddMovieMockOk()
+        public void TestAddMovieOk()
         {
             Movie movie = new Movie()
             {
@@ -90,18 +91,55 @@ namespace DataAccess.Tests
                 Duration = 2.1,
                 Image = "Mi directorio",
             };
-            var mockSet = new Mock<DbSet<Movie>>();
-            mockSet.Setup(m => m.Add(It.IsAny<Movie>()));
-            var mockDbContext = new Mock<DbContext>(MockBehavior.Strict);
-            mockDbContext.Setup(d => d.Set<Movie>()).Returns(mockSet.Object);
-            mockDbContext.Setup(d => d.SaveChanges()).Returns(1);
-            var repository = new MovieRepository(mockDbContext.Object);
+            var repository = new MovieRepository(this.context);
 
             var result = repository.Add(movie);
+            
+            Assert.AreEqual(repository.GetAll().Count(), 1);
+        }
 
-            mockSet.VerifyAll();
-            mockDbContext.VerifyAll();
-            Assert.AreEqual(result, movie);
+        [TestMethod]
+        public void TestUpdateMovieOk()
+        {
+            Movie movie = new Movie()
+            {
+                Name = "Elona Holmes",
+                AgeAllowed = 12,
+                CategoryId = 1,
+                Description = "La herama de Sherlock y Mycroft Holmes",
+                Duration = 2.1,
+                Image = "Mi directorio",
+            };
+            this.context.Add(movie);
+            this.context.SaveChanges();
+            movie.Name = "Elona Holmes 2";
+            var repository = new MovieRepository(this.context);
+
+            repository.Update(movie);
+
+            Assert.AreEqual(repository.Get(1), movie);
+        }
+
+        [TestMethod]
+        public void TestDeleteMovieOk()
+        {
+            Movie movie = new Movie()
+            {
+                Name = "Elona Holmes",
+                AgeAllowed = 12,
+                CategoryId = 1,
+                Description = "La herama de Sherlock y Mycroft Holmes",
+                Duration = 2.1,
+                Image = "Mi directorio",
+            };
+            this.context.Add(movie);
+            this.context.SaveChanges();
+            var repository = new MovieRepository(this.context);
+            var movieToDelete = repository.Get(1);
+
+            repository.Delete(movieToDelete);
+
+            Assert.AreEqual(repository.GetAll().Count(), 0);
         }
     }
 }

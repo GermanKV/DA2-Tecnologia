@@ -3,6 +3,7 @@ using Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DataAccess
@@ -21,6 +22,31 @@ namespace DataAccess
         public IEnumerable<Movie> GetAll()
         {
             return this.movies;
+        }
+
+        public Movie Get(int id)
+        {
+            return this.movies.First(m => m.Id == id);
+        }
+
+        public Movie Add(Movie movie)
+        {
+            this.movies.Add(movie);
+            this.context.SaveChanges();
+
+            return movie;
+        }
+
+        public void Update(Movie movie)
+        {
+            this.context.Entry<Movie>(movie).State = EntityState.Modified;
+            this.context.SaveChanges();
+        }
+
+        public void Delete(Movie movie)
+        {
+            this.movies.Remove(movie);
+            this.context.SaveChanges();
         }
     }
 }

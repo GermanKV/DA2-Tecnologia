@@ -2,6 +2,7 @@
 using System.Linq;
 using BusinessLogicInterface;
 using Microsoft.AspNetCore.Mvc;
+using Model.In;
 using Model.Out;
 using WebApi.Filters;
 
@@ -33,18 +34,12 @@ namespace WebApi.Controllers
             return Ok();
         }
 
-        //api/movies?ageAllowed=5
-        /*[HttpGet]
-        public IActionResult GetBy([FromQuery]int ageAllowed)
-        {
-            return Ok();
-        }*/
-
         //api/movies
         [HttpPost]
-        public IActionResult Post([FromBody]MovieModel movie)
+        public IActionResult Post([FromBody]MovieModel movieModel)
         {
-            return Ok();
+            var movie = this.moviesLogic.Add(movieModel.ToEntity());
+            return CreatedAtRoute("GetName",new {id = movie.Id }, new MovieDetailInfoModel(movie));
         }
 
         //api/movies/5
@@ -66,13 +61,6 @@ namespace WebApi.Controllers
         public IActionResult Delete()
         {
             return Ok();
-        }
-
-        public class MovieModel
-        {
-            public string Name { get; set; }
-            public string Description { get; set; }
-            public double Duration { get; set; }
         }
     }
 }

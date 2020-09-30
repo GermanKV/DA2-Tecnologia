@@ -15,6 +15,11 @@ namespace BusinessLogic
             this.moviesRepository = moviesRepository;
         }
 
+        public Movie Add(Movie movie)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Movie> GetAll()
         {
             return this.moviesRepository.GetAll();

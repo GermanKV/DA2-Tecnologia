@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Domain;
 
 namespace Model.Out
@@ -27,6 +28,16 @@ namespace Model.Out
             }
 
             return result;
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = -1371779497;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Name);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Image);
+            hashCode = hashCode * -1521134295 + Rank.GetHashCode();
+            return hashCode;
         }
     }
 }

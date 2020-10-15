@@ -1,0 +1,886 @@
+{
+  "BusinessLogic.dll": {
+    "c:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\BusinessLogic\\Logics\\MovieLogic.cs": {
+      "BusinessLogic.MovieLogic": {
+        "Domain.Movie BusinessLogic.MovieLogic::Add(Domain.Movie)": {
+          "Lines": {
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<Domain.Movie> BusinessLogic.MovieLogic::GetAll()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        },
+        "System.Void BusinessLogic.MovieLogic::.ctor(DataAccessInterface.IMovieRepository)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "c:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\BusinessLogic\\Logics\\SessionLogic.cs": {
+      "BusinessLogic.SessionLogic": {
+        "System.Boolean BusinessLogic.SessionLogic::IsCorrectToken(System.String)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "BusinessLogicInterface.dll": {},
+  "DataAccess.dll": {
+    "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\DataAccess\\Context\\VidlyContext.cs": {
+      "DataAccess.VidlyContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<Domain.Movie> DataAccess.VidlyContext::get_Movies()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Domain.Category> DataAccess.VidlyContext::get_Categories()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<Domain.SessionState> DataAccess.VidlyContext::get_Sessions()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.Void DataAccess.VidlyContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Void DataAccess.VidlyContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 12,
+              "EndOffset": 70,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void DataAccess.VidlyContext::.ctor()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void DataAccess.VidlyContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions)": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\DataAccess\\Repositories\\MovieRepository.cs": {
+      "DataAccess.MovieRepository": {
+        "System.Collections.Generic.IEnumerable`1<Domain.Movie> DataAccess.MovieRepository::GetAll()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0
+          },
+          "Branches": []
+        },
+        "Domain.Movie DataAccess.MovieRepository::Get(System.Int32)": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        },
+        "Domain.Movie DataAccess.MovieRepository::Add(Domain.Movie)": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        },
+        "System.Void DataAccess.MovieRepository::Update(Domain.Movie)": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0
+          },
+          "Branches": []
+        },
+        "System.Void DataAccess.MovieRepository::Delete(Domain.Movie)": {
+          "Lines": {
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0
+          },
+          "Branches": []
+        },
+        "System.Void DataAccess.MovieRepository::.ctor(Microsoft.EntityFrameworkCore.DbContext)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "DataAccessInterface.dll": {},
+  "Domain.dll": {
+    "c:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\Domain\\Entities\\Category.cs": {
+      "Domain.Category": {
+        "System.Int32 Domain.Category::get_Id()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.Category::get_Name()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<Domain.Movie> Domain.Category::get_Movies()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "c:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\Domain\\Entities\\Movie.cs": {
+      "Domain.Movie": {
+        "System.Int32 Domain.Movie::get_Id()": {
+          "Lines": {
+            "10": 10
+          },
+          "Branches": []
+        },
+        "System.String Domain.Movie::get_Name()": {
+          "Lines": {
+            "13": 11
+          },
+          "Branches": []
+        },
+        "System.String Domain.Movie::get_Image()": {
+          "Lines": {
+            "14": 9
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Movie::get_Rank()": {
+          "Lines": {
+            "15": 7
+          },
+          "Branches": []
+        },
+        "System.String Domain.Movie::get_Description()": {
+          "Lines": {
+            "16": 7
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Movie::get_AgeAllowed()": {
+          "Lines": {
+            "17": 7
+          },
+          "Branches": []
+        },
+        "System.Double Domain.Movie::get_Duration()": {
+          "Lines": {
+            "18": 7
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.Movie::get_CategoryId()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "Domain.Category Domain.Movie::get_Category()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Domain.Movie::Equals(System.Object)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 31,
+              "EndOffset": 33,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 31,
+              "EndOffset": 52,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 16,
+              "EndOffset": 55,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "c:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\Domain\\Entities\\SessionState.cs": {
+      "Domain.SessionState": {
+        "System.Int32 Domain.SessionState::get_Id()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Guid Domain.SessionState::get_Token()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Domain.SessionState::get_UserId()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "Domain.User Domain.SessionState::get_User()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "c:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\Domain\\Entities\\User.cs": {
+      "Domain.User": {
+        "System.Int32 Domain.User::get_Id()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.User::get_Name()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.User::get_Email()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String Domain.User::get_Password()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "Factory.dll": {
+    "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\Factory\\Factories\\ServiceFactory.cs": {
+      "Factory.ServiceFactory": {
+        "System.Void Factory.ServiceFactory::AddCustomServices()": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0
+          },
+          "Branches": []
+        },
+        "System.Void Factory.ServiceFactory::AddDbContextService()": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        },
+        "System.Void Factory.ServiceFactory::.ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "Model.dll": {
+    "c:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\Model\\Models\\Out\\Movie\\MovieBasicInfoModel.cs": {
+      "Model.Out.MovieBasicInfoModel": {
+        "System.Int32 Model.Out.MovieBasicInfoModel::get_Id()": {
+          "Lines": {
+            "7": 8
+          },
+          "Branches": []
+        },
+        "System.String Model.Out.MovieBasicInfoModel::get_Name()": {
+          "Lines": {
+            "8": 8
+          },
+          "Branches": []
+        },
+        "System.String Model.Out.MovieBasicInfoModel::get_Image()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Model.Out.MovieBasicInfoModel::get_Rank()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Model.Out.MovieBasicInfoModel::Equals(System.Object)": {
+          "Lines": {
+            "21": 2,
+            "22": 2,
+            "24": 2,
+            "25": 2,
+            "26": 2,
+            "27": 2,
+            "29": 2,
+            "30": 2
+          },
+          "Branches": [
+            {
+              "Line": 24,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 26,
+              "Offset": 31,
+              "EndOffset": 33,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 26,
+              "Offset": 31,
+              "EndOffset": 52,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 16,
+              "EndOffset": 55,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            }
+          ]
+        },
+        "System.Void Model.Out.MovieBasicInfoModel::.ctor(Domain.Movie)": {
+          "Lines": {
+            "12": 4,
+            "13": 4,
+            "14": 4,
+            "15": 4,
+            "16": 4,
+            "17": 4,
+            "18": 4
+          },
+          "Branches": []
+        }
+      }
+    },
+    "c:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\Model\\Models\\Out\\Movie\\MovieDetailInfoModel.cs": {
+      "Model.Out.MovieDetailInfoModel": {
+        "System.Int32 Model.Out.MovieDetailInfoModel::get_Id()": {
+          "Lines": {
+            "7": 4
+          },
+          "Branches": []
+        },
+        "System.String Model.Out.MovieDetailInfoModel::get_Name()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String Model.Out.MovieDetailInfoModel::get_Description()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Model.Out.MovieDetailInfoModel::get_Rank()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Double Model.Out.MovieDetailInfoModel::get_Duration()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 Model.Out.MovieDetailInfoModel::get_AgeAllowed()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String Model.Out.MovieDetailInfoModel::get_Image()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean Model.Out.MovieDetailInfoModel::Equals(System.Object)": {
+          "Lines": {
+            "27": 1,
+            "28": 1,
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "35": 1,
+            "36": 1
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 30,
+              "Offset": 16,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void Model.Out.MovieDetailInfoModel::.ctor(Domain.Movie)": {
+          "Lines": {
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 2,
+            "24": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "c:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\Model\\Models\\In\\Movie\\MovieModel.cs": {
+      "Model.In.MovieModel": {
+        "System.String Model.In.MovieModel::get_Name()": {
+          "Lines": {
+            "7": 4
+          },
+          "Branches": []
+        },
+        "System.String Model.In.MovieModel::get_Description()": {
+          "Lines": {
+            "8": 4
+          },
+          "Branches": []
+        },
+        "System.Double Model.In.MovieModel::get_Duration()": {
+          "Lines": {
+            "9": 4
+          },
+          "Branches": []
+        },
+        "System.String Model.In.MovieModel::get_Image()": {
+          "Lines": {
+            "10": 4
+          },
+          "Branches": []
+        },
+        "System.Int32 Model.In.MovieModel::get_CategoryId()": {
+          "Lines": {
+            "11": 4
+          },
+          "Branches": []
+        },
+        "System.Int32 Model.In.MovieModel::get_AgeAllowed()": {
+          "Lines": {
+            "12": 4
+          },
+          "Branches": []
+        },
+        "Domain.Movie Model.In.MovieModel::ToEntity()": {
+          "Lines": {
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 2,
+            "19": 2,
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 2,
+            "24": 2,
+            "25": 2
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "SessionInterface.dll": {},
+  "WebApi.dll": {
+    "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\WebApi\\Program.cs": {
+      "WebApi.Program": {
+        "System.Void WebApi.Program::Main(System.String[])": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.Extensions.Hosting.IHostBuilder WebApi.Program::CreateHostBuilder(System.String[])": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\WebApi\\Filters\\AuthorizationAttributeFilter.cs": {
+      "WebApi.Filters.AuthorizationFilter": {
+        "System.Void WebApi.Filters.AuthorizationFilter::OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": [
+            {
+              "Line": 14,
+              "Offset": 41,
+              "EndOffset": 43,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 14,
+              "Offset": 41,
+              "EndOffset": 88,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 109,
+              "EndOffset": 111,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 109,
+              "EndOffset": 154,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "SessionInterface.ISessionLogic WebApi.Filters.AuthorizationFilter::GetSessionLogic(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\WebApi\\Filters\\AuthorizationDIFilter.cs": {
+      "WebApi.Filters.AuthorizationDIFilter": {
+        "System.Void WebApi.Filters.AuthorizationDIFilter::OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 41,
+              "EndOffset": 43,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 41,
+              "EndOffset": 88,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 111,
+              "EndOffset": 113,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 111,
+              "EndOffset": 156,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void WebApi.Filters.AuthorizationDIFilter::.ctor(SessionInterface.ISessionLogic)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\WebApi\\Filters\\ExceptionFilter.cs": {
+      "WebApi.Filters.ExceptionFilter": {
+        "System.Void WebApi.Filters.ExceptionFilter::OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)": {
+          "Lines": {
+            "10": 0,
+            "12": 0,
+            "13": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Daniel\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Nocturno\\Vidly\\WebApi\\Controllers\\MovieController.cs": {
+      "WebApi.Controllers.MovieController": {
+        "Microsoft.AspNetCore.Mvc.IActionResult WebApi.Controllers.MovieController::Get()": {
+          "Lines": {
+            "26": 1,
+            "27": 3,
+            "28": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult WebApi.Controllers.MovieController::Get(System.Int32)": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult WebApi.Controllers.MovieController::Post(Model.In.MovieModel)": {
+          "Lines": {
+            "40": 2,
+            "41": 2,
+            "42": 1,
+            "43": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult WebApi.Controllers.MovieController::Put(System.Int32,Model.In.MovieModel)": {
+          "Lines": {
+            "48": 0,
+            "49": 0,
+            "50": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult WebApi.Controllers.MovieController::Delete(System.Int32)": {
+          "Lines": {
+            "55": 0,
+            "56": 0,
+            "57": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Mvc.IActionResult WebApi.Controllers.MovieController::Delete()": {
+          "Lines": {
+            "62": 0,
+            "63": 0,
+            "64": 0
+          },
+          "Branches": []
+        },
+        "System.Void WebApi.Controllers.MovieController::.ctor(BusinessLogicInterface.IMovieLogic)": {
+          "Lines": {
+            "18": 3,
+            "19": 3,
+            "20": 3,
+            "21": 3
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

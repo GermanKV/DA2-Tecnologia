@@ -14,19 +14,16 @@ namespace WebApi.Controllers
     public class MovieController : ControllerBase
     {
         private readonly IMovieLogic moviesLogic;
-
         public MovieController(IMovieLogic moviesLogic)
         {
             this.moviesLogic = moviesLogic;
         }
-        
         //api/movies
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(this.moviesLogic.GetAll().Select(m => new MovieBasicInfoModel(m)));
         }
-
         //api/movies/5
         [HttpGet("{id}", Name = "GetMovie")]
         public IActionResult Get([FromRoute]int id)
@@ -48,7 +45,7 @@ namespace WebApi.Controllers
         {
             return Ok();
         }
-
+        
         //api/movies/5
         [HttpDelete("{id}")]
         public IActionResult Delete([FromRoute]int id)

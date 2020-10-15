@@ -30,5 +30,20 @@ namespace Domain
 
             return result;
         }
+
+        public override int GetHashCode()
+        {
+            int hashCode = 1328192014;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Name);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Image);
+            hashCode = hashCode * -1521134295 + Rank.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Description);
+            hashCode = hashCode * -1521134295 + AgeAllowed.GetHashCode();
+            hashCode = hashCode * -1521134295 + Duration.GetHashCode();
+            hashCode = hashCode * -1521134295 + CategoryId.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<Category>.Default.GetHashCode(Category);
+            return hashCode;
+        }
     }
 }

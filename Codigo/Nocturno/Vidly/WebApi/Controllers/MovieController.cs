@@ -1,6 +1,7 @@
 
 using System.Linq;
 using BusinessLogicInterface;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Model.In;
 using Model.Out;
@@ -8,9 +9,10 @@ using WebApi.Filters;
 
 namespace WebApi.Controllers
 {
+    [EnableCors("AllowEverything")]
     [ApiController]
     [Route("api/movies")]
-    [ServiceFilter(typeof(AuthorizationDIFilter))]
+    //[ServiceFilter(typeof(AuthorizationDIFilter))]
     public class MovieController : ControllerBase
     {
         private readonly IMovieLogic moviesLogic;

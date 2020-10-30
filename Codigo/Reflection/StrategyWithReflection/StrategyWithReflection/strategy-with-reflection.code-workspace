@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": ".vscode"
+		},
+		{
+			"path": "Sort.Interface"
+		},
+		{
+			"path": "Sort"
+		},
+		{
+			"path": "Main"
+		}
+	],
+	"settings": {}
+}

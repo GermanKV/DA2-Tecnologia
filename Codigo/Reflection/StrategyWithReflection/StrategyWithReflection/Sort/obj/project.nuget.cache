@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "7zFCLGxPPIS7nfAwQd/tXDYubV7koYBEStO89ZgjppLryYvK/pTyNw63C5z0HtGeokR3m2/JKX6KHZHBBKC86Q==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\Daniel\\Documents\\Personal\\ORT\\Clase DA2\\Reflection\\StrategyWithReflection\\StrategyWithReflection\\Sort\\Sort.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+C:\Users\Daniel\Documents\My projects\Reflection\ImplementacionExterna\bin\Debug\netstandard2.0\ImplementacionExterna.deps.json
+C:\Users\Daniel\Documents\My projects\Reflection\ImplementacionExterna\bin\Debug\netstandard2.0\ImplementacionExterna.dll
+C:\Users\Daniel\Documents\My projects\Reflection\ImplementacionExterna\bin\Debug\netstandard2.0\ImplementacionExterna.pdb
+C:\Users\Daniel\Documents\My projects\Reflection\ImplementacionExterna\bin\Debug\netstandard2.0\Reflection.Domain.Interface.dll
+C:\Users\Daniel\Documents\My projects\Reflection\ImplementacionExterna\bin\Debug\netstandard2.0\Reflection.Domain.Interface.pdb
+C:\Users\Daniel\Documents\My projects\Reflection\ImplementacionExterna\obj\Debug\netstandard2.0\ImplementacionExterna.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\My projects\Reflection\ImplementacionExterna\obj\Debug\netstandard2.0\ImplementacionExterna.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\My projects\Reflection\ImplementacionExterna\obj\Debug\netstandard2.0\ImplementacionExterna.AssemblyInfoInputs.cache
+C:\Users\Daniel\Documents\My projects\Reflection\ImplementacionExterna\obj\Debug\netstandard2.0\ImplementacionExterna.AssemblyInfo.cs
+C:\Users\Daniel\Documents\My projects\Reflection\ImplementacionExterna\obj\Debug\netstandard2.0\ImplementacionExterna.csproj.CopyComplete
+C:\Users\Daniel\Documents\My projects\Reflection\ImplementacionExterna\obj\Debug\netstandard2.0\ImplementacionExterna.dll
+C:\Users\Daniel\Documents\My projects\Reflection\ImplementacionExterna\obj\Debug\netstandard2.0\ImplementacionExterna.pdb

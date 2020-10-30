@@ -1,0 +1,12 @@
+C:\Users\Daniel\documents\personal\ort\Clase DA2\Reflection\StrategyWithReflection\sort\bin\Debug\netstandard2.0\Sort.deps.json
+C:\Users\Daniel\documents\personal\ort\Clase DA2\Reflection\StrategyWithReflection\sort\bin\Debug\netstandard2.0\Sort.dll
+C:\Users\Daniel\documents\personal\ort\Clase DA2\Reflection\StrategyWithReflection\sort\bin\Debug\netstandard2.0\Sort.pdb
+C:\Users\Daniel\documents\personal\ort\Clase DA2\Reflection\StrategyWithReflection\sort\bin\Debug\netstandard2.0\Sort.Interface.dll
+C:\Users\Daniel\documents\personal\ort\Clase DA2\Reflection\StrategyWithReflection\sort\bin\Debug\netstandard2.0\Sort.Interface.pdb
+C:\Users\Daniel\documents\personal\ort\Clase DA2\Reflection\StrategyWithReflection\sort\obj\Debug\netstandard2.0\Sort.csprojAssemblyReference.cache
+C:\Users\Daniel\documents\personal\ort\Clase DA2\Reflection\StrategyWithReflection\sort\obj\Debug\netstandard2.0\Sort.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\documents\personal\ort\Clase DA2\Reflection\StrategyWithReflection\sort\obj\Debug\netstandard2.0\Sort.AssemblyInfoInputs.cache
+C:\Users\Daniel\documents\personal\ort\Clase DA2\Reflection\StrategyWithReflection\sort\obj\Debug\netstandard2.0\Sort.AssemblyInfo.cs
+C:\Users\Daniel\documents\personal\ort\Clase DA2\Reflection\StrategyWithReflection\sort\obj\Debug\netstandard2.0\Sort.csproj.CopyComplete
+C:\Users\Daniel\documents\personal\ort\Clase DA2\Reflection\StrategyWithReflection\sort\obj\Debug\netstandard2.0\Sort.dll
+C:\Users\Daniel\documents\personal\ort\Clase DA2\Reflection\StrategyWithReflection\sort\obj\Debug\netstandard2.0\Sort.pdb

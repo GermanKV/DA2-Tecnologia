@@ -1,0 +1,12 @@
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain\bin\Debug\netstandard2.0\Reflection.Domain.deps.json
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain\bin\Debug\netstandard2.0\Reflection.Domain.dll
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain\bin\Debug\netstandard2.0\Reflection.Domain.pdb
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain\bin\Debug\netstandard2.0\Reflection.Domain.Interface.dll
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain\bin\Debug\netstandard2.0\Reflection.Domain.Interface.pdb
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain\obj\Debug\netstandard2.0\Reflection.Domain.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain\obj\Debug\netstandard2.0\Reflection.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain\obj\Debug\netstandard2.0\Reflection.Domain.AssemblyInfoInputs.cache
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain\obj\Debug\netstandard2.0\Reflection.Domain.AssemblyInfo.cs
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain\obj\Debug\netstandard2.0\Reflection.Domain.csproj.CopyComplete
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain\obj\Debug\netstandard2.0\Reflection.Domain.dll
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain\obj\Debug\netstandard2.0\Reflection.Domain.pdb

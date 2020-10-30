@@ -1,0 +1,9 @@
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain.Interface\bin\Debug\netstandard2.0\Reflection.Domain.Interface.deps.json
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain.Interface\bin\Debug\netstandard2.0\Reflection.Domain.Interface.dll
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain.Interface\bin\Debug\netstandard2.0\Reflection.Domain.Interface.pdb
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain.Interface\obj\Debug\netstandard2.0\Reflection.Domain.Interface.csprojAssemblyReference.cache
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain.Interface\obj\Debug\netstandard2.0\Reflection.Domain.Interface.csproj.CoreCompileInputs.cache
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain.Interface\obj\Debug\netstandard2.0\Reflection.Domain.Interface.AssemblyInfoInputs.cache
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain.Interface\obj\Debug\netstandard2.0\Reflection.Domain.Interface.AssemblyInfo.cs
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain.Interface\obj\Debug\netstandard2.0\Reflection.Domain.Interface.dll
+C:\Users\Daniel\Documents\My projects\Reflection\Reflection.Domain.Interface\obj\Debug\netstandard2.0\Reflection.Domain.Interface.pdb

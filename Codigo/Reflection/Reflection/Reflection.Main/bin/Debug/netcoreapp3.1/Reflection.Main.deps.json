@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Reflection.Main/1.0.0": {
+        "dependencies": {
+          "Reflection.Domain": "1.0.0",
+          "Reflection.Domain.Interface": "1.0.0"
+        },
+        "runtime": {
+          "Reflection.Main.dll": {}
+        }
+      },
+      "Reflection.Domain/1.0.0": {
+        "dependencies": {
+          "Reflection.Domain.Interface": "1.0.0"
+        },
+        "runtime": {
+          "Reflection.Domain.dll": {}
+        }
+      },
+      "Reflection.Domain.Interface/1.0.0": {
+        "runtime": {
+          "Reflection.Domain.Interface.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Reflection.Main/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reflection.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reflection.Domain.Interface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

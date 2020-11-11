@@ -1,5 +1,6 @@
 using BusinessLogic;
 using BusinessLogicInterface;
+using BusinessLogicInterface.Interfaces;
 using DataAccess;
 using DataAccessInterface;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,7 @@ namespace Factory
             services.AddScoped<IMovieRepository, MovieRepository>();
             services.AddScoped<IMovieLogic, MovieLogic>();
             services.AddScoped<ISessionLogic, SessionLogic>();
+            services.AddScoped<IImporterLogic, ImporterLogic>();
         }
 
         public void AddDbContextService()

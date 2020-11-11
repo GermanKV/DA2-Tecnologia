@@ -5,6 +5,7 @@
     <ProjectReference Include="..\DataAccessInterface\DataAccessInterface.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\SessionInterface\SessionInterface.csproj" />
+    <ProjectReference Include="..\ImportInterface\ImportInterface.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

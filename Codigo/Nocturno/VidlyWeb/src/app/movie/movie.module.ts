@@ -4,17 +4,19 @@ import { MoviesComponent } from './movies/movies.component';
 import { MovieService } from '../services/movie/movie.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CreateMovieComponent } from './create-movie/create-movie.component';
 
 
 
 @NgModule({
-  declarations: [MoviesComponent],
+  declarations: [MoviesComponent, CreateMovieComponent],
   imports: [
+    FormsModule,
     CommonModule,
     HttpClientModule
   ],
   providers: [MovieService],
-  exports:[MoviesComponent]
+  exports:[MoviesComponent, CreateMovieComponent]
 })
 export class MovieModule { }

@@ -1,4 +1,9 @@
 <ul>
-  <li *ngFor="let movie of movies">{{movie.name}}</li>
+  <li *ngFor="let movie of movies">
+    {{movie.name}}
+    <input type="text" [(ngModel)]="movie.name">
+    <button (click)="selectedMovie(movie)">Show</button>
+  </li>
 </ul>
+
 {{movies | json}}

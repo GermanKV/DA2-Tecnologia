@@ -1,4 +1,4 @@
-using BusinessLogicInterface.Interfaces;
+using BusinessLogicInterface;
 using BusinessLogicInterface.Utils;
 using Microsoft.AspNetCore.Mvc;
 

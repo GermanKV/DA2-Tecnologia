@@ -19,6 +19,8 @@ namespace WebApi
     [ExcludeFromCodeCoverage]
     public class Startup
     {
+        private readonly string cors = "AllowEverything";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -30,11 +32,12 @@ namespace WebApi
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("AllowEverything",builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+                options.AddPolicy(cors,builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             });
             
             services.AddControllers(options => options.Filters.Add(typeof(ExceptionFilter)));
             ServiceFactory serviceFactory = new ServiceFactory(services);
+            services.AddSingleton(typeof(string), Configuration.GetValue<string>("pathImport"));
             serviceFactory.AddDbContextService();
             serviceFactory.AddCustomServices();
             services.AddScoped<AuthorizationDIFilter>();
@@ -51,8 +54,10 @@ namespace WebApi
 
             app.UseRouting();
 
+            app.UseCors(cors);
+
             app.UseAuthorization();
-            app.UseCors();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

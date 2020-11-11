@@ -8,11 +8,13 @@ import { MovieModule } from '../movie/movie.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [IndexHomeComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MovieModule
-  ]
+    MovieModule,
+    LayoutModule
+  ],
+  bootstrap:[]
 })
 export class HomeModule { }

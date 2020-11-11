@@ -8,11 +8,11 @@ import { MovieBasicInfo } from 'src/app/models/movie-basic-info';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-  movies: MovieBasicInfo[] = [{id: 1, name: "Enola Holme", rank: 1, image:"hola"}as MovieBasicInfo, {id: 1, name: "Transformers", rank: 1, image:"hola"}as MovieBasicInfo];
+  movies: MovieBasicInfo[] = [];
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
-    //this.movieService.getAll().subscribe(moviesResponse => this.finishGetAll(moviesResponse), (error: string) => this.showError(error));
+    this.movieService.getAll().subscribe(moviesResponse => this.finishGetAll(moviesResponse), (error: string) => this.showError(error));
   }
 
   private finishGetAll(moviesResponse: MovieBasicInfo[]){

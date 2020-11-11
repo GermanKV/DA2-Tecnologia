@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using BusinessLogicInterface;
-using BusinessLogicInterface.Interfaces;
 using BusinessLogicInterface.Utils;
 using Domain;
 using ImportInterface;
@@ -14,11 +13,11 @@ namespace BusinessLogic
     public class ImporterLogic : IImporterLogic
     {
         private readonly IMovieLogic movieLogic;
-        private readonly string path;
+        private readonly string configurationPath;
         public ImporterLogic(IMovieLogic movieLogic, string path)
         {
             this.movieLogic = movieLogic;
-            this.path = path;
+            this.configurationPath = path;
         } 
 
         public List<string> GetNames()
@@ -33,7 +32,6 @@ namespace BusinessLogic
             Sacar de archivo de configuracion
             */
             List<string> names = new List<string>();
-            string configurationPath = this.path+"\\Importers";
             
             var directory = new DirectoryInfo(configurationPath);
             FileInfo[] files = directory.GetFiles("*.dll");

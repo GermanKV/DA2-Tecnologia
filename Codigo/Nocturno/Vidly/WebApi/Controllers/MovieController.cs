@@ -9,7 +9,6 @@ using WebApi.Filters;
 
 namespace WebApi.Controllers
 {
-    [EnableCors("AllowEverything")]
     [ApiController]
     [Route("api/movies")]
     //[ServiceFilter(typeof(AuthorizationDIFilter))]

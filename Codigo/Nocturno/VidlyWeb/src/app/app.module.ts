@@ -16,17 +16,15 @@ import { IndexHomeComponent } from './home/index-home/index-home.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    IndexHomeComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+
     AngularMaterialModule,
-    LayoutModule,
-    MovieModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

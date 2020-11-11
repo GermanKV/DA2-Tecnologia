@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using BusinessLogicInterface.Utils;
 
-namespace BusinessLogicInterface.Interfaces
+namespace BusinessLogicInterface
 {
     public interface IImporterLogic
     {

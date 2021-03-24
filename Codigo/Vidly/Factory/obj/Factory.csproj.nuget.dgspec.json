@@ -27,7 +27,11 @@
         "frameworks": {
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\danie\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Vidly\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\danie\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Vidly\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

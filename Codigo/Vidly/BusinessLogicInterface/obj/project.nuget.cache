@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "EQyFk9pl6s5RQf1WaG2yKpeq6D9/cDnXQFoqSK3dgWKGCq77Fc22UEleDpqk4B11J0rYTX4DAEpYfclmdrWnUg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\danie\\Documents\\GitHub\\DA2-Tecnologia\\Codigo\\Vidly\\BusinessLogicInterface\\BusinessLogicInterface.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danie\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\danie\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

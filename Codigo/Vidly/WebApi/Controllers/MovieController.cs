@@ -18,74 +18,74 @@ namespace Vidly.WebApi.Controllers
                 Id = 1,
                 Title = "Transformers 1",
                 ReleaseDate = new DateTime(2007,7,3),
-                Category = new Category
-                {
-                    Id = 1,
-                    Name = "Ciencia ficcion"
-                },
+                CategoryId = 1,
                 Description = "Autos que son aliens",
                 Stars = 3,
-                Director = new Director
-                {
-                    Id = 1,
-                    Name = "John Rogers"
-                }
+                DirectorId = 1
             },
             new Movie
             {
                 Id = 2,
                 Title = "Transformers 2",
                 ReleaseDate = new DateTime(2009,6,24),
-                Category = new Category
-                {
-                    Id = 1,
-                    Name = "Ciencia ficcion "
-                },
+                CategoryId = 1,
                 Description = "Autos que son aliens",
                 Stars = 2,
-                Director = new Director
-                {
-                    Id = 1,
-                    Name = "John Rogers"
-                }
+                DirectorId = 1
             },
             new Movie
             {
                 Id = 3,
                 Title = "Transformers 3",
                 ReleaseDate = new DateTime(2011,6,29),
-                Category = new Category
-                {
-                    Id = 1,
-                    Name = "Ciencia ficcion 2"
-                },
+                CategoryId = 2,
                 Description = "Autos que son aliens",
                 Stars = 5,
-                Director = new Director
-                {
-                    Id = 1,
-                    Name = "John Rogers"
-                }
+                DirectorId = 1
             }
         };
 
+        //GET movies
+        //StatusCode: 200, 400, 500
         [HttpGet]
         public IActionResult GetAllMoviesFiltered([FromQuery] MovieQueryParam movieQueryParam)
         {
-            IEnumerable<Movie> movies = this.movies.Where(movie => movie.Category.Name == movieQueryParam.Category && movie.ReleaseDate.Year == movieQueryParam.Year);
+            IEnumerable<Movie> movies = this.movies
+                .Where(movie =>
+                movie.Category.Name == movieQueryParam.Category
+                && movie.ReleaseDate.Year == movieQueryParam.Year);
 
             return Ok(movies);
         }
 
-        //GET movies/movieId
-        [HttpGet("{movieId}")]
+        //GET movies/{movieId}
+        //StatusCode: 200, 400, 500
+        [HttpGet("{movieId}", Name = "GetMovieByIdUri")]
         public IActionResult GetMovieById(int movieId)
         {
             Movie movie = this.movies.FirstOrDefault(movie => movie.Id == movieId);
 
+            if(movie is null)
+            {
+                return BadRequest($"No existe una pelicula con el id {movieId}");
+            }
+
             return Ok(movie);
         }
 
+        /*
+         POST movies
+         BODY: {
+            'id': int,
+            'title': string,
+            'stars': int,
+            'description': string,
+            'releaseDate': DateTime,
+            'directorId': int,
+            'categoryId': int
+         }
+         */
+        //StatusCode: 201, 400, 500
         [HttpPost]
         public IActionResult CreateMovie(Movie movie)
         {
@@ -93,15 +93,28 @@ namespace Vidly.WebApi.Controllers
 
             this.movies.Add(movie);
 
-            return CreatedAtRoute("GetMovieById", movie.Id, movie);
+            return CreatedAtRoute("GetMovieByIdUri", movie.Id, movie);
         }
 
+        /*
+         PUT movies/{moviesId}
+         BODY: {
+            'id': int,
+            'title': string,
+            'stars': int,
+            'description': string,
+            'releaseDate': DateTime,
+            'directorId': int,
+            'categoryId': int
+         }
+         */
+        //StatusCode: 204, 400, 500
         [HttpPut("{movieId}")]
         public IActionResult UpdateMovie(int movieId, Movie movie)
         {
             Movie movieToUpdate = this.movies.FirstOrDefault(movie => movie.Id == movieId);
 
-            if(movie is null)
+            if (movieToUpdate is null)
             {
                 return BadRequest($"No existe una pelicula con el id {movieId}");
             }
@@ -112,12 +125,14 @@ namespace Vidly.WebApi.Controllers
             return NoContent();
         }
 
+        //DELETE movies/{movieId}
+        //StatusCode: 204, 400, 500
         [HttpDelete("{movieId}")]
         public IActionResult DeleteMovieById(int movieId)
         {
             Movie movieToRemove = this.movies.FirstOrDefault(movie => movie.Id == movieId);
 
-            if(movieToRemove is null)
+            if (movieToRemove is null)
             {
                 return BadRequest($"No existe una pelicula con el id {movieId}");
             }

@@ -1,0 +1,5 @@
+C:\Users\danie\Documents\GitHub\DA2-Tecnologia\Codigo\Vidly\WebApi\obj\Debug\netcoreapp3.1\Vidly.WebApi.csprojAssemblyReference.cache
+C:\Users\danie\Documents\GitHub\DA2-Tecnologia\Codigo\Vidly\WebApi\obj\Debug\netcoreapp3.1\Vidly.WebApi.AssemblyInfoInputs.cache
+C:\Users\danie\Documents\GitHub\DA2-Tecnologia\Codigo\Vidly\WebApi\obj\Debug\netcoreapp3.1\Vidly.WebApi.AssemblyInfo.cs
+C:\Users\danie\Documents\GitHub\DA2-Tecnologia\Codigo\Vidly\WebApi\obj\Debug\netcoreapp3.1\Vidly.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\danie\Documents\GitHub\DA2-Tecnologia\Codigo\Vidly\WebApi\obj\Debug\netcoreapp3.1\Vidly.WebApi.MvcApplicationPartsAssemblyInfo.cache
